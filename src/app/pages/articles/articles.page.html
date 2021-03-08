@@ -6,10 +6,18 @@
         <ion-title>Artigos</ion-title>
     </ion-toolbar>
 </ion-header>
+<ion-content class="ion-padding">
 
-<ion-content>
-    <h2>Artigos recentes</h2>
-    <p>
-        pkgirtmwojnyhjdyi
-    </p>
-</ion-content>
+    <!-- 1) Exibe artigos, um de cada vez (loop) -->
+  
+    <div *ngFor="let art of item | async">
+      <ion-card class="ion-no-margin ion-margin-bottom" routerLink="/view/{{ art.id }}">
+        <img src="{{ art.img }}" alt="{{ art.title }}" title="{{ art.title }}">
+        <ion-card-header>
+          <ion-card-title>{{ art.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{ art.intro }}</ion-card-content>
+      </ion-card>
+    </div>
+  
+  </ion-content>
