@@ -6,10 +6,31 @@
                     <ion-list-header>Algum Título</ion-list-header>
                     <ion-note>:3</ion-note>
 
-                    <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-                        <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-                            <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-                            <ion-label>{{ p.title }}</ion-label>
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item routerDirection="root" routerLink="/articles" lines="none" detail="false" routerLinkActive="selected">
+                            <ion-icon slot="start" name="document-text"></ion-icon>
+                            <ion-label>Artigos</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item routerDirection="root" routerLink="/news" lines="none" detail="false" routerLinkActive="selected">
+                            <ion-icon slot="start" name="newspaper"></ion-icon>
+                            <ion-label>Notícias</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item routerDirection="root" routerLink="/contacts" lines="none" detail="false" routerLinkActive="selected">
+                            <ion-icon slot="start" name="chatbubbles"></ion-icon>
+                            <ion-label>Faça Contato</ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle auto-hide="false">
+                        <ion-item routerDirection="root" routerLink="/about" lines="none" detail="false" routerLinkActive="selected">
+                            <ion-icon slot="start" name="information-circle"></ion-icon>
+                            <ion-label>Sobre</ion-label>
                         </ion-item>
                     </ion-menu-toggle>
                 </ion-list>
