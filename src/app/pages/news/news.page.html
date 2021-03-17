@@ -6,10 +6,23 @@
         <ion-title>Notícias</ion-title>
     </ion-toolbar>
 </ion-header>
+<ion-content class="ion-padding-horizontal" *ngIf="newsList">
 
-<ion-content>
-    <h2>Notícias recentes</h2>
-    <p>
-        pkgirtmwojnyhjdyi
-    </p>
-</ion-content>
+    <div *ngFor="let item of newsList">
+  
+        <ion-card class="ion-no-margin ion-margin-vertical" (click)="readNews(item.url)" style="cursor:pointer">
+        <img src="{{ item.urlToImage }}" alt="{{ item.title }}">
+        <ion-card-header>
+            <ion-card-subtitle>
+                {{ item.source.name }}
+                em
+                {{ item.publishedAt | date: 'dd/MM/yyyy hh:mm' }}.
+              </ion-card-subtitle>
+          <ion-card-title>{{ item.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{ item.description }}</ion-card-content>
+      </ion-card>
+  
+    </div>
+  
+  </ion-content>

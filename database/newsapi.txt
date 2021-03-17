@@ -1,0 +1,9 @@
+https://newsapi.org/v2/everything?apiKey=${this.apiKey}&source=google-news-br&language=pt&q=${this.apiQuery}
+
+
+
+
+19710185b5a64e28a6cf13ad90b05274
+
+
+https://newsapi.org/v2/everything?apiKey=19710185b5a64e28a6cf13ad90b05274&source=google-news-br&language=pt&q=gato
