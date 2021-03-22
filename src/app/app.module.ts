@@ -31,9 +31,10 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     // 5) Incorporar módulo do Firestore
     AngularFirestoreModule,
 
-// 6) Incorpora 
+    // 6) Incorpora módulo Authentication
+    AngularFireAuthModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
